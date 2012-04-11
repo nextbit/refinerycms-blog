@@ -27,7 +27,7 @@ module Refinery
         @post.increment!(:access_count, 1)
 
         respond_with (@post) do |format|
-          format.html { present(@post) }
+          format.html { @post }
           format.js { render :partial => 'post', :layout => false }
         end
       end
